@@ -1,6 +1,12 @@
 const nombre = 'Julián';
 
-const elemento = <div>Hola {nombre}</div>;
+const elemento = (
+  <input 
+    onChange={(ev) => {
+      console.log(ev.target.value);
+    }}
+  />
+);
 
 const app = document.getElementById('react-app');
 
