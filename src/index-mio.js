@@ -68,28 +68,21 @@
 
 import { UncontrolledCheckbox, CheckboxList } from "./tarea/Tarea3.js";
 
-ReactDOM.render(<UncontrolledCheckbox 
-  name = 'CheckBox'
-  initialValue = {true}
+// ReactDOM.render(<UncontrolledCheckbox 
+//   name = 'CheckBox'
+//   initialValue = {true}
+// />, document.getElementById('react-app'));
+
+
+ReactDOM.render( <CheckboxList 
+  items={[
+        {initialValue: false,
+        name: 'uno'},
+        {initialValue: true,
+        name: 'dos'},
+        {initialValue: false,
+        name: 'tres'}
+      ]
+     }
 />, document.getElementById('react-app'));
 
-
-// ReactDOM.render( <CheckboxList 
-//   items={[
-//         {initialValue: false,
-//         name: 'uno'},
-//         {initialValue: true,
-//         name: 'dos'},
-//         {initialValue: false,
-//         name: 'tres'},
-//         {initialValue: true,
-//         name: 'cuatro'},
-//         {initialValue: true,
-//         name: 'cinco'},
-//         {initialValue: true,
-//         name: 'seis'},
-//         {initialValue: false,
-//         name: 'siete'}
-//       ]
-//      }
-// />, document.getElementById('react-app'));
