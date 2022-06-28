@@ -74,15 +74,29 @@ import { UncontrolledCheckbox, CheckboxList } from "./tarea/Tarea3.js";
 // />, document.getElementById('react-app'));
 
 
-ReactDOM.render( <CheckboxList 
-  items={[
-        {initialValue: false,
-        name: 'uno'},
-        {initialValue: true,
-        name: 'dos'},
-        {initialValue: false,
-        name: 'tres'}
-      ]
-     }
-/>, document.getElementById('react-app'));
+// ReactDOM.render(<CheckboxList
+//   items={{
+//     uno: false,
+//     dos: true,
+//     tres: false,
+//   }
+//   }
+// />, document.getElementById('react-app'));
 
+/////////////////////////////TAREA 4//////////////////////////
+
+import { ControlledCheckbox, CheckboxListWithState } from "./tarea/Tarea4.js";
+
+// ReactDOM.render(<ControlledCheckbox 
+//   name = 'Checkbox'
+//   value = {true}
+//   onChange = {() => {alert('asdasd')} }
+// />, document.getElementById('react-app'))
+
+// ReactDOM.render(<CheckboxListWithState
+//   items={{
+//     uno: false,
+//     dos: true,
+//     tres: false,
+//   }}
+// />, document.getElementById('react-app'))

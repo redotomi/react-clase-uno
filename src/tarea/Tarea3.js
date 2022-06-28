@@ -11,13 +11,13 @@
  */
 
 export function UncontrolledCheckbox(props) {
-const [check, setCheck] = React.useState(props.initialValue);
+  const [check, setCheck] = React.useState(props.initialValue);
   return (
     <React.Fragment>
       <span>{props.name}</span>
       <input type="checkbox"
-        onChange={(ev) => setCheck(!check)}
-        checked = {check}
+        onChange={() => setCheck(!check)}
+        checked={check}
       />
     </React.Fragment>
 
@@ -39,14 +39,14 @@ const [check, setCheck] = React.useState(props.initialValue);
 export function CheckboxList(props) {
   return (
     <ul>
-    {props.items.map((item, i) => (
-      <li key={item.name}>
-        <UncontrolledCheckbox 
-          initialValue={item.initialValue}
-          name={item.name}
-        />
-      </li>
-    ))}
-  </ul>
+      {Object.entries(props.items).map((item) => {
+        return <li key={item[0]}>
+           <UncontrolledCheckbox 
+            initialValue={item[1]}
+            name={item[0]}
+          />
+        </li>
+      })}
+    </ul>
   );
 }
